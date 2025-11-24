@@ -42,6 +42,7 @@ dmypy.json
 # -------------------------
 # Sphinx docs (when you add them)
 # -------------------------
+docs/build/
 docs/_build/
 docs/_autosummary/
 
