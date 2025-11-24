@@ -1,17 +1,11 @@
-# src/my_lib/linear_model.py
-from __future__ import annotations
-
-import logging
-from typing import Final, cast
-
 import numpy as np
-
+import logging
+from __future__ import annotations
+from typing import Final, cast
 from .base import BaseModel
 
 logger = logging.getLogger(__name__)
-
 ArrayLike = np.ndarray  # keep it simple for now
-
 
 class MyLinearRegression(BaseModel):
     """

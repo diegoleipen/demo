@@ -1,17 +1,11 @@
-# src/my_lib/logistic_model.py
-from __future__ import annotations
-
-import logging
-from typing import cast
-
 import numpy as np
-
+import logging
+from __future__ import annotations
+from typing import cast
 from .base import BaseModel
 
 logger = logging.getLogger(__name__)
-
 ArrayLike = np.ndarray
-
 
 class MyLogisticRegression(BaseModel):
     """

@@ -1,11 +1,7 @@
-# src/my_lib/base.py
+import numpy as np
 from __future__ import annotations
-
 from abc import ABC, abstractmethod
 from typing import Any, Protocol, runtime_checkable
-
-import numpy as np
-
 
 @runtime_checkable
 class SupportsArray(Protocol):
