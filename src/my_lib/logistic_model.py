@@ -1,10 +1,14 @@
-import numpy as np
-import logging
 from __future__ import annotations
-from typing import cast
+
+import logging
+from typing import Final, cast
+
+import numpy as np
+
 from .base import BaseModel
 
 logger = logging.getLogger(__name__)
+
 ArrayLike = np.ndarray
 
 class MyLogisticRegression(BaseModel):

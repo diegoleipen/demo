@@ -1,11 +1,15 @@
-import numpy as np
+# src/my_lib/base.py
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from typing import Any, Protocol, runtime_checkable
 
+import numpy as np
+
+
 @runtime_checkable
 class SupportsArray(Protocol):
-    def __array__(self, dtype: Any | None = None) -> None: ...  # noqa: D401, D401
+    def __array__(self, dtype: Any | None = None) -> np.ndarray: ...
 
 
 ArrayLike = np.ndarray  # you can refine this later
