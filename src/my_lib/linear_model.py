@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 
 ArrayLike = np.ndarray  # keep it simple for now
 
+
 class MyLinearRegression(BaseModel):
     """
     Simple linear regression using the normal equations.

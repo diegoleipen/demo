@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import Final, cast
+from typing import cast
 
 import numpy as np
 
@@ -10,6 +10,7 @@ from .base import BaseModel
 logger = logging.getLogger(__name__)
 
 ArrayLike = np.ndarray
+
 
 class MyLogisticRegression(BaseModel):
     """

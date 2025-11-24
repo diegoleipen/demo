@@ -1,6 +1,7 @@
 import numpy as np
 import pytest
 from sklearn.linear_model import LinearRegression
+
 from my_lib.linear_model import MyLinearRegression
 
 

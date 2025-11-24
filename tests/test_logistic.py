@@ -1,5 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+
 from my_lib.logistic_model import MyLogisticRegression
 
 

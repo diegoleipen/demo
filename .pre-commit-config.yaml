@@ -6,25 +6,25 @@ repos:
         entry: poetry run ruff format .
         language: system
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
 
       - id: ruff-check
         name: ruff check
         entry: poetry run ruff check .
         language: system
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
 
       - id: mypy
         name: mypy (strict)
         entry: poetry run mypy
         language: system
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
 
       - id: pytest
         name: pytest
         entry: poetry run pytest
         language: system
         pass_filenames: false
-        stages: [commit]
+        stages: [pre-commit]
