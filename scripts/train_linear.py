@@ -1,6 +1,8 @@
 # scripts/train_linear.py
 from __future__ import annotations
 
+from pathlib import Path
+
 import mlflow
 import numpy as np
 
@@ -45,9 +47,15 @@ def main() -> None:
 
         print(f"MSE on test set: {mse:.4f}")
 
-        # Optionally log artifact: save coefficients
-        np.save("coef.npy", model.coef_)
-        mlflow.log_artifact("coef.npy")
+        # Save coefficients as a versioned model artifact
+        models_dir = Path("models")
+        models_dir.mkdir(exist_ok=True)
+
+        coef_path = models_dir / "linear_coef.npy"
+        np.save(coef_path, model.coef_)
+
+        # Log the same file to MLflow
+        mlflow.log_artifact(str(coef_path))
 
 
 if __name__ == "__main__":
