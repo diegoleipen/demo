@@ -6,6 +6,7 @@ from typing import Final, cast
 import numpy as np
 
 from .base import BaseModel
+from .config import LinearConfig
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +43,15 @@ class MyLinearRegression(BaseModel):
 
     _BIAS_COLUMN: Final[float] = 1.0
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        learning_rate: float = 0.01,
+        n_iter: int = 1000,
+        fit_intercept: bool = True,
+    ) -> None:
+        self.config: LinearConfig = LinearConfig(
+            learning_rate=learning_rate, n_iter=n_iter, fit_intercept=fit_intercept
+        )
         self.coef_: ArrayLike | None = None
 
     def fit(self, X: ArrayLike, y: ArrayLike) -> MyLinearRegression:
