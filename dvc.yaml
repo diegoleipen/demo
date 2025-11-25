@@ -1,0 +1,7 @@
+stages:
+  train_linear:
+    cmd: poetry run python scripts/train_linear.py
+    deps:
+    - scripts/train_linear.py
+    outs:
+    - models/linear_coef.npy

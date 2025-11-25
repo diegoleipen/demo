@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  train_linear:
+    cmd: poetry run python scripts/train_linear.py
+    deps:
+    - path: scripts/train_linear.py
+      hash: md5
+      md5: e087fd23be5221d64477b4d3dcd7572a
+      size: 1556
+    outs:
+    - path: models/linear_coef.npy
+      hash: md5
+      md5: ab27bc2bf9c8fd636f4fb221f0df5a1d
+      size: 160
