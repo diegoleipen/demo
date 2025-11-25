@@ -1,0 +1,27 @@
+# General
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Poetry cache / lock artifacts (optional to ignore cache)
+.poetry-cache/
+.cache/
+
+# DVC / MLflow heavy stuff
+.dvc/
+mlruns/
+models/
+
+# Tests, docs, misc
+tests/
+docs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
